@@ -37,6 +37,7 @@ from (values
   ('ahmed.mohammed@rvce.com.sa'),
   ('mohammed.ali@rvce.com.sa'),
   ('ravi.kumar@rvce.com.sa')
+  
 ) as x(email)
 where not exists (select 1 from auth.users u where u.email = x.email);
 
